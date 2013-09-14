@@ -1,6 +1,6 @@
 # packages
 apt-get update
-apt-get install -y build-essential debhelper dh-make mc
+apt-get install -y build-essential debhelper dh-make mc vim
 
 # some debian defaults
 cat >>/home/vagrant/.bashrc <<EOF
