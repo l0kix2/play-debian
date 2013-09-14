@@ -1,0 +1,15 @@
+Source: batman
+Section: python
+Priority: optional
+Maintainer: Kirill Sibirev <sibirev@yandex-team.ru>
+Build-Depends: debhelper (>= 8.0.0)
+Standards-Version: 3.9.2
+Homepage: http://yandex.ru
+
+Package: batman
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Batman
+ long Batman
+ .
+ batman batman
