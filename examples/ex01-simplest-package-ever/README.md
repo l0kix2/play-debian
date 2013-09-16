@@ -68,11 +68,11 @@ cd ~/batman-0.1.0
 diff_fs dpkg-buildpackage -us -uc
 ```
 
-`dpkg-source` command man: http://www.opennet.ru/man.shtml?topic=dpkg-source 
-`dpkg-source -b` Build a source package.
+`dpkg-source` command man: http://www.opennet.ru/man.shtml?topic=dpkg-source  
+`dpkg-source -b` Build a source package.  
 
-`dh` man http://man.he.net/man1/dh 
-`dh clean --no-act` check called debhelpers
+`dh` man http://man.he.net/man1/dh  
+`dh clean --no-act` check called debhelpers  
 
 debhelpers
 ```
