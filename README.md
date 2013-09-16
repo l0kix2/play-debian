@@ -20,4 +20,6 @@ and slightly modified.
 vagrant up
 vagrant ssh
 vagrant reload --provision
+
+vagrant@precise32:~$ cp -r /vagrant/examples/ ~/play-debian && cd play-debian
 ```
