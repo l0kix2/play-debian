@@ -1,27 +1,15 @@
-Info
-----
-Lists of debhelper sequences for each stage.
-```
-dh clean --no-act
-dh build --no-act
-dh binary --no-act
-```
-
-debhelper dh overrides http://joeyh.name/blog/entry/debhelper_dh_overrides/  
-debhelpers http://manpages.ubuntu.com/manpages/intrepid/man7/debhelper.7.html
-
 ```
 cd ~/batman-0.1.0
 ```
 
-Clean
------
-let's assume that we creating file while building and want delete it in clean
+Clean stage
+-----------
+Let's assume that we creating file while building and want delete it in clean  
 ```touch debian/stupid-file```
 
+Edit rules  
 ```vim debian/rules```
 
-http://www.gnu.org/software/make/manual/make.html
 ```
 override_dh_clean:
 [tab]        dh_clean
@@ -32,9 +20,10 @@ override_dh_clean:
 
 (edit rules backwards)
 
-Build
------
-http://manpages.ubuntu.com/manpages/intrepid/man1/dh_auto_build.1.html will run make build or python setup.py build or something
+Build stage
+-----------
+http://manpages.ubuntu.com/manpages/intrepid/man1/dh_auto_build.1.html 
+dh_auto_build will run make build or python setup.py build or something else.
 
 Binary
 ------
@@ -71,5 +60,15 @@ diff_fs sudo dpkg -i ../batman_0.1.0_all.deb
 diff_fs sudo dpkg -r batman
 ```
 
-see also
-http://manpages.ubuntu.com/manpages/intrepid/man1/dh_link.1.html
+Info
+----
+Lists of debhelper sequences for each stage.
+```
+dh clean --no-act
+dh build --no-act
+dh binary --no-act
+```
+
+Debhelper dh overrides http://joeyh.name/blog/entry/debhelper_dh_overrides/
+List of almost all debhelpers http://manpages.ubuntu.com/manpages/intrepid/man7/debhelper.7.html
+Make manual: http://www.gnu.org/software/make/manual/make.html
