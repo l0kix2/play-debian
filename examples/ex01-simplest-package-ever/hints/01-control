@@ -1,0 +1,15 @@
+Source: batman
+Section: python
+Priority: optional
+Maintainer: Kirill Sibirev <sibirev@yandex-team.ru>
+Build-Depends: debhelper (>= 8.0.0)
+Standards-Version: 3.9.2
+Homepage: http://justice.org
+
+Package: batman
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Batman lib
+ long Batman
+ .
+ batman batman
