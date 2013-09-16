@@ -4,8 +4,8 @@ apt-get install -y build-essential debhelper dh-make mc vim git
 
 # some debian defaults
 cat >>/home/vagrant/.bashrc <<EOF
-DEBEMAIL="sibirev@yandex-team.ru"
-DEBFULLNAME="Kirill Sibirev"
+DEBEMAIL="johnny@ya.ru"
+DEBFULLNAME="Johnny Appleseed"
 export DEBEMAIL DEBFULLNAME
 EOF
 
