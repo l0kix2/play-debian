@@ -63,7 +63,7 @@ Building
 cd ~/batman-0.1.0
 ```
 
--us -uc == do not gpg sign package
+`-us -uc` do not gpg sign package
 ```
 diff_fs dpkg-buildpackage -us -uc
 ```
