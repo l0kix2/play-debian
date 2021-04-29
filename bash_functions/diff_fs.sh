@@ -1,14 +1,22 @@
+_sudo() {
+    if sudo -v 2>/dev/null; then
+        sudo "$@"
+    else
+        "$@"
+    fi
+}
+
 snapshot_fs() {
     randval=$RANDOM
     before_name="/tmp/fs-$randval.before"
     after_name="/tmp/fs-$randval.after"
 
-    sudo find / -xdev | sort > $before_name
+    _sudo find / -xdev | sort > $before_name
 
     echo Starting: "$@"
     eval $(printf "%q " "$@")
 
-    sudo find / -xdev | sort > $after_name
+    _sudo find / -xdev | sort > $after_name
     echo $randval
     echo "Snapshots in " $before_name $after_name
 }
@@ -22,12 +30,12 @@ diff_fs() {
     before_name="/tmp/fs-$randval.before"
     after_name="/tmp/fs-$randval.after"
 
-    sudo find / -xdev | sort > $before_name
+    _sudo find / -xdev | sort > $before_name
 
     echo Starting: "$@"
     eval $(printf "%q " "$@")
 
-    sudo find / -xdev | sort > $after_name
+    _sudo find / -xdev | sort > $after_name
     echo $randval
     echo "Snapshots in " $before_name $after_name
 
